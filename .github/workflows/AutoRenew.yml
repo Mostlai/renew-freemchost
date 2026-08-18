@@ -38,8 +38,8 @@ jobs:
     - name: Send Telegram Notification
       if: always()
       env:
-        TG_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-        TG_ID: ${{ secrets.TG_USER_ID }}
+        TG_TOKEN: ${{ secrets.TG_TOKEN }}
+        TG_ID: ${{ secrets.TG_ID }}
       run: |
         # 1. 根据工作流结果设定大标题
         if [ "${{ job.status }}" = "success" ]; then
